@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="quienlohaceModelStoreContainer" CdmEntityContainer="quienlohaceEntities">
+    <EntitySetMapping Name="area">
+      <EntityTypeMapping TypeName="quienlohaceModel.area">
+        <MappingFragment StoreEntitySet="area">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="logo" ColumnName="logo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="asignacion">
+      <EntityTypeMapping TypeName="quienlohaceModel.asignacion">
+        <MappingFragment StoreEntitySet="asignacion">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="fechaasignacion" ColumnName="fechaasignacion" />
+          <ScalarProperty Name="idexperto" ColumnName="idexperto" />
+          <ScalarProperty Name="idtarea" ColumnName="idtarea" />
+          <ScalarProperty Name="valorpactado" ColumnName="valorpactado" />
+          <ScalarProperty Name="observaciones" ColumnName="observaciones" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="calificacion">
+      <EntityTypeMapping TypeName="quienlohaceModel.calificacion">
+        <MappingFragment StoreEntitySet="calificacion">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idtarea" ColumnName="idtarea" />
+          <ScalarProperty Name="fechacalificacion" ColumnName="fechacalificacion" />
+          <ScalarProperty Name="valor" ColumnName="valor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="datopersonal">
+      <EntityTypeMapping TypeName="quienlohaceModel.datopersonal">
+        <MappingFragment StoreEntitySet="datopersonal">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idusuario" ColumnName="idusuario" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="apellido" ColumnName="apellido" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="celular" ColumnName="celular" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="facebook" ColumnName="facebook" />
+          <ScalarProperty Name="foto" ColumnName="foto" />
+          <ScalarProperty Name="fecharegistro" ColumnName="fecharegistro" />
+          <ScalarProperty Name="fechanacimiento" ColumnName="fechanacimiento" />
+          <ScalarProperty Name="genero" ColumnName="genero" />
+          <ScalarProperty Name="hojavida" ColumnName="hojavida" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="habilidad">
+      <EntityTypeMapping TypeName="quienlohaceModel.habilidad">
+        <MappingFragment StoreEntitySet="habilidad">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idsubarea" ColumnName="idsubarea" />
+          <ScalarProperty Name="idexperto" ColumnName="idexperto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rol">
+      <EntityTypeMapping TypeName="quienlohaceModel.rol">
+        <MappingFragment StoreEntitySet="rol">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="subarea">
+      <EntityTypeMapping TypeName="quienlohaceModel.subarea">
+        <MappingFragment StoreEntitySet="subarea">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="idarea" ColumnName="idarea" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tarea">
+      <EntityTypeMapping TypeName="quienlohaceModel.tarea">
+        <MappingFragment StoreEntitySet="tarea">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="contacto" ColumnName="contacto" />
+          <ScalarProperty Name="titulo" ColumnName="titulo" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="foto1" ColumnName="foto1" />
+          <ScalarProperty Name="foto2" ColumnName="foto2" />
+          <ScalarProperty Name="foto3" ColumnName="foto3" />
+          <ScalarProperty Name="foto4" ColumnName="foto4" />
+          <ScalarProperty Name="idsubarea" ColumnName="idsubarea" />
+          <ScalarProperty Name="fecharegistro" ColumnName="fecharegistro" />
+          <ScalarProperty Name="fechapublicado" ColumnName="fechapublicado" />
+          <ScalarProperty Name="valorestimado" ColumnName="valorestimado" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="usuario">
+      <EntityTypeMapping TypeName="quienlohaceModel.usuario">
+        <MappingFragment StoreEntitySet="usuario">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="usuario1" ColumnName="usuario" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="idrol" ColumnName="idrol" />
+          <ScalarProperty Name="idestado" ColumnName="idestado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="estadoTarea">
+      <EntityTypeMapping TypeName="quienlohaceModel.estadoTarea">
+        <MappingFragment StoreEntitySet="estadoTarea">
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="estadoUsuario">
+      <EntityTypeMapping TypeName="quienlohaceModel.estadoUsuario">
+        <MappingFragment StoreEntitySet="estadoUsuario">
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

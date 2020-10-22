@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="acd3d25c3a9b43389460c77a1ad0acc3" Name="Diagram1">
+        <EntityTypeShape EntityType="quienlohaceModel.area" Width="1.5" PointX="3" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="quienlohaceModel.asignacion" Width="1.5" PointX="9.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="quienlohaceModel.calificacion" Width="1.5" PointX="9.75" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="quienlohaceModel.datopersonal" Width="1.5" PointX="5.25" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="quienlohaceModel.habilidad" Width="1.5" PointX="7.5" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="quienlohaceModel.rol" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="quienlohaceModel.subarea" Width="1.5" PointX="5.25" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="quienlohaceModel.tarea" Width="1.5" PointX="7.5" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="quienlohaceModel.usuario" Width="1.5" PointX="3" PointY="3.375" IsExpanded="true" />
+        <AssociationConnector Association="quienlohaceModel.FK_subarea_area" ManuallyRouted="false" />
+        <AssociationConnector Association="quienlohaceModel.FK_asignacion_tarea" ManuallyRouted="false" />
+        <AssociationConnector Association="quienlohaceModel.FK_calificacion_tarea" ManuallyRouted="false" />
+        <AssociationConnector Association="quienlohaceModel.FK_experto_usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="quienlohaceModel.FK_habilidad_experto" ManuallyRouted="false" />
+        <AssociationConnector Association="quienlohaceModel.FK_habilidad_subarea" ManuallyRouted="false" />
+        <AssociationConnector Association="quienlohaceModel.FK_usuario_rol" ManuallyRouted="false" />
+        <AssociationConnector Association="quienlohaceModel.FK_tarea_subarea" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="quienlohaceModel.estadoTarea" Width="1.5" PointX="12" PointY="8.875" />
+        <EntityTypeShape EntityType="quienlohaceModel.estadoUsuario" Width="1.5" PointX="3.875" PointY="0.5" />
+        <AssociationConnector Association="quienlohaceModel.FK_tarea_estadoTarea" />
+        <AssociationConnector Association="quienlohaceModel.FK_usuario_estadoUsuario" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

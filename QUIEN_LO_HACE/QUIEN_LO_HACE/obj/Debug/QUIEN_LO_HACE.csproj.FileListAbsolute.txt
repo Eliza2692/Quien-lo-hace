@@ -1,0 +1,42 @@
+C:\Users\Sena-Sala-3\Documents\Visual Studio 2013\Projects\Proyectos Elizabeth\QUIEN_LO_HACE\QUIEN_LO_HACE\bin\QUIEN_LO_HACE.dll.config
+C:\Users\Sena-Sala-3\Documents\Visual Studio 2013\Projects\Proyectos Elizabeth\QUIEN_LO_HACE\QUIEN_LO_HACE\bin\QUIEN_LO_HACE.dll
+C:\Users\Sena-Sala-3\Documents\Visual Studio 2013\Projects\Proyectos Elizabeth\QUIEN_LO_HACE\QUIEN_LO_HACE\bin\QUIEN_LO_HACE.pdb
+C:\Users\Sena-Sala-3\Documents\Visual Studio 2013\Projects\Proyectos Elizabeth\QUIEN_LO_HACE\QUIEN_LO_HACE\bin\BLL.dll
+C:\Users\Sena-Sala-3\Documents\Visual Studio 2013\Projects\Proyectos Elizabeth\QUIEN_LO_HACE\QUIEN_LO_HACE\bin\DAL.dll
+C:\Users\Sena-Sala-3\Documents\Visual Studio 2013\Projects\Proyectos Elizabeth\QUIEN_LO_HACE\QUIEN_LO_HACE\bin\EntityFramework.dll
+C:\Users\Sena-Sala-3\Documents\Visual Studio 2013\Projects\Proyectos Elizabeth\QUIEN_LO_HACE\QUIEN_LO_HACE\bin\EntityFramework.SqlServer.dll
+C:\Users\Sena-Sala-3\Documents\Visual Studio 2013\Projects\Proyectos Elizabeth\QUIEN_LO_HACE\QUIEN_LO_HACE\bin\BLL.pdb
+C:\Users\Sena-Sala-3\Documents\Visual Studio 2013\Projects\Proyectos Elizabeth\QUIEN_LO_HACE\QUIEN_LO_HACE\bin\DAL.pdb
+C:\Users\Sena-Sala-3\Documents\Visual Studio 2013\Projects\Proyectos Elizabeth\QUIEN_LO_HACE\QUIEN_LO_HACE\bin\EntityFramework.xml
+C:\Users\Sena-Sala-3\Documents\Visual Studio 2013\Projects\Proyectos Elizabeth\QUIEN_LO_HACE\QUIEN_LO_HACE\bin\EntityFramework.SqlServer.xml
+C:\Users\Sena-Sala-3\Documents\Visual Studio 2013\Projects\Proyectos Elizabeth\QUIEN_LO_HACE\QUIEN_LO_HACE\obj\Debug\QUIEN_LO_HACE.csprojResolveAssemblyReference.cache
+C:\Users\Sena-Sala-3\Documents\Visual Studio 2013\Projects\Proyectos Elizabeth\QUIEN_LO_HACE\QUIEN_LO_HACE\obj\Debug\QUIEN_LO_HACE.dll
+C:\Users\Sena-Sala-3\Documents\Visual Studio 2013\Projects\Proyectos Elizabeth\QUIEN_LO_HACE\QUIEN_LO_HACE\obj\Debug\QUIEN_LO_HACE.pdb
+C:\Users\Rock-Efeller\Documents\Visual Studio 2013\Projects\adsi 903738\QUIEN_LO_HACE\QUIEN_LO_HACE\bin\QUIEN_LO_HACE.dll.config
+C:\Users\Rock-Efeller\Documents\Visual Studio 2013\Projects\adsi 903738\QUIEN_LO_HACE\QUIEN_LO_HACE\bin\QUIEN_LO_HACE.dll
+C:\Users\Rock-Efeller\Documents\Visual Studio 2013\Projects\adsi 903738\QUIEN_LO_HACE\QUIEN_LO_HACE\bin\QUIEN_LO_HACE.pdb
+C:\Users\Rock-Efeller\Documents\Visual Studio 2013\Projects\adsi 903738\QUIEN_LO_HACE\QUIEN_LO_HACE\bin\BLL.dll
+C:\Users\Rock-Efeller\Documents\Visual Studio 2013\Projects\adsi 903738\QUIEN_LO_HACE\QUIEN_LO_HACE\bin\DAL.dll
+C:\Users\Rock-Efeller\Documents\Visual Studio 2013\Projects\adsi 903738\QUIEN_LO_HACE\QUIEN_LO_HACE\bin\EntityFramework.dll
+C:\Users\Rock-Efeller\Documents\Visual Studio 2013\Projects\adsi 903738\QUIEN_LO_HACE\QUIEN_LO_HACE\bin\EntityFramework.SqlServer.dll
+C:\Users\Rock-Efeller\Documents\Visual Studio 2013\Projects\adsi 903738\QUIEN_LO_HACE\QUIEN_LO_HACE\bin\BLL.pdb
+C:\Users\Rock-Efeller\Documents\Visual Studio 2013\Projects\adsi 903738\QUIEN_LO_HACE\QUIEN_LO_HACE\bin\DAL.pdb
+C:\Users\Rock-Efeller\Documents\Visual Studio 2013\Projects\adsi 903738\QUIEN_LO_HACE\QUIEN_LO_HACE\bin\EntityFramework.xml
+C:\Users\Rock-Efeller\Documents\Visual Studio 2013\Projects\adsi 903738\QUIEN_LO_HACE\QUIEN_LO_HACE\bin\EntityFramework.SqlServer.xml
+C:\Users\Rock-Efeller\Documents\Visual Studio 2013\Projects\adsi 903738\QUIEN_LO_HACE\QUIEN_LO_HACE\obj\Debug\QUIEN_LO_HACE.csprojResolveAssemblyReference.cache
+C:\Users\Rock-Efeller\Documents\Visual Studio 2013\Projects\adsi 903738\QUIEN_LO_HACE\QUIEN_LO_HACE\obj\Debug\QUIEN_LO_HACE.dll
+C:\Users\Rock-Efeller\Documents\Visual Studio 2013\Projects\adsi 903738\QUIEN_LO_HACE\QUIEN_LO_HACE\obj\Debug\QUIEN_LO_HACE.pdb
+C:\Users\AdminSENA\Videos\QUIEN_LO_HACE\QUIEN_LO_HACE\bin\QUIEN_LO_HACE.dll.config
+C:\Users\AdminSENA\Videos\QUIEN_LO_HACE\QUIEN_LO_HACE\bin\QUIEN_LO_HACE.dll
+C:\Users\AdminSENA\Videos\QUIEN_LO_HACE\QUIEN_LO_HACE\bin\QUIEN_LO_HACE.pdb
+C:\Users\AdminSENA\Videos\QUIEN_LO_HACE\QUIEN_LO_HACE\bin\BLL.dll
+C:\Users\AdminSENA\Videos\QUIEN_LO_HACE\QUIEN_LO_HACE\bin\DAL.dll
+C:\Users\AdminSENA\Videos\QUIEN_LO_HACE\QUIEN_LO_HACE\bin\EntityFramework.dll
+C:\Users\AdminSENA\Videos\QUIEN_LO_HACE\QUIEN_LO_HACE\bin\EntityFramework.SqlServer.dll
+C:\Users\AdminSENA\Videos\QUIEN_LO_HACE\QUIEN_LO_HACE\bin\BLL.pdb
+C:\Users\AdminSENA\Videos\QUIEN_LO_HACE\QUIEN_LO_HACE\bin\DAL.pdb
+C:\Users\AdminSENA\Videos\QUIEN_LO_HACE\QUIEN_LO_HACE\bin\EntityFramework.xml
+C:\Users\AdminSENA\Videos\QUIEN_LO_HACE\QUIEN_LO_HACE\bin\EntityFramework.SqlServer.xml
+C:\Users\AdminSENA\Videos\QUIEN_LO_HACE\QUIEN_LO_HACE\obj\Debug\QUIEN_LO_HACE.csprojResolveAssemblyReference.cache
+C:\Users\AdminSENA\Videos\QUIEN_LO_HACE\QUIEN_LO_HACE\obj\Debug\QUIEN_LO_HACE.dll
+C:\Users\AdminSENA\Videos\QUIEN_LO_HACE\QUIEN_LO_HACE\obj\Debug\QUIEN_LO_HACE.pdb

@@ -1,0 +1,778 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="quienlohaceModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="area">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="descripcion" Type="varchar" MaxLength="500" />
+          <Property Name="logo" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="asignacion">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="fechaasignacion" Type="date" Nullable="false" />
+          <Property Name="idexperto" Type="int" Nullable="false" />
+          <Property Name="idtarea" Type="int" Nullable="false" />
+          <Property Name="valorpactado" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="observaciones" Type="varchar" MaxLength="2000" />
+        </EntityType>
+        <EntityType Name="calificacion">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="idtarea" Type="int" Nullable="false" />
+          <Property Name="fechacalificacion" Type="date" Nullable="false" />
+          <Property Name="valor" Type="int" />
+        </EntityType>
+        <EntityType Name="datopersonal">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="idusuario" Type="int" Nullable="false" />
+          <Property Name="nombre" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="apellido" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="direccion" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="telefono" Type="varchar" MaxLength="30" />
+          <Property Name="celular" Type="varchar" MaxLength="30" />
+          <Property Name="email" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="facebook" Type="varchar" MaxLength="200" />
+          <Property Name="foto" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="fecharegistro" Type="date" Nullable="false" />
+          <Property Name="fechanacimiento" Type="date" />
+          <Property Name="genero" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="hojavida" Type="varchar" MaxLength="300" />
+          <Property Name="estado" Type="int" />
+        </EntityType>
+        <EntityType Name="estadoTarea">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="descripcion" Type="varchar" MaxLength="2000" />
+        </EntityType>
+        <EntityType Name="estadoUsuario">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="descripcion" Type="varchar" MaxLength="2000" />
+        </EntityType>
+        <EntityType Name="habilidad">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="idsubarea" Type="int" Nullable="false" />
+          <Property Name="idexperto" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="rol">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="descripcion" Type="varchar" MaxLength="2000" />
+        </EntityType>
+        <EntityType Name="subarea">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="idarea" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tarea">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="contacto" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="titulo" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="descripcion" Type="varchar" MaxLength="2000" Nullable="false" />
+          <Property Name="foto1" Type="varchar" MaxLength="300" />
+          <Property Name="foto2" Type="varchar" MaxLength="300" />
+          <Property Name="foto3" Type="varchar" MaxLength="300" />
+          <Property Name="foto4" Type="varchar" MaxLength="300" />
+          <Property Name="idsubarea" Type="int" Nullable="false" />
+          <Property Name="fecharegistro" Type="date" Nullable="false" />
+          <Property Name="fechapublicado" Type="date" />
+          <Property Name="valorestimado" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="direccion" Type="varbinary" MaxLength="300" Nullable="false" />
+          <Property Name="telefono" Type="varchar" MaxLength="30" />
+          <Property Name="email" Type="varchar" MaxLength="300" Nullable="false" />
+          <Property Name="estado" Type="int" />
+        </EntityType>
+        <EntityType Name="usuario">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="usuario" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="password" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="idrol" Type="int" Nullable="false" />
+          <Property Name="idestado" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_asignacion_tarea">
+          <End Role="tarea" Type="Self.tarea" Multiplicity="1" />
+          <End Role="asignacion" Type="Self.asignacion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tarea">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="asignacion">
+              <PropertyRef Name="idtarea" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_calificacion_tarea">
+          <End Role="tarea" Type="Self.tarea" Multiplicity="1" />
+          <End Role="calificacion" Type="Self.calificacion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tarea">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="calificacion">
+              <PropertyRef Name="idtarea" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_experto_usuario">
+          <End Role="usuario" Type="Self.usuario" Multiplicity="1" />
+          <End Role="datopersonal" Type="Self.datopersonal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuario">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="datopersonal">
+              <PropertyRef Name="idusuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_habilidad_experto">
+          <End Role="datopersonal" Type="Self.datopersonal" Multiplicity="1" />
+          <End Role="habilidad" Type="Self.habilidad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="datopersonal">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="habilidad">
+              <PropertyRef Name="idexperto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_habilidad_subarea">
+          <End Role="subarea" Type="Self.subarea" Multiplicity="1" />
+          <End Role="habilidad" Type="Self.habilidad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="subarea">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="habilidad">
+              <PropertyRef Name="idsubarea" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_subarea_area">
+          <End Role="area" Type="Self.area" Multiplicity="1" />
+          <End Role="subarea" Type="Self.subarea" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="area">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="subarea">
+              <PropertyRef Name="idarea" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tarea_estadoTarea">
+          <End Role="estadoTarea" Type="Self.estadoTarea" Multiplicity="0..1" />
+          <End Role="tarea" Type="Self.tarea" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="estadoTarea">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tarea">
+              <PropertyRef Name="estado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tarea_subarea">
+          <End Role="subarea" Type="Self.subarea" Multiplicity="1" />
+          <End Role="tarea" Type="Self.tarea" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="subarea">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tarea">
+              <PropertyRef Name="idsubarea" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_usuario_estadoUsuario">
+          <End Role="estadoUsuario" Type="Self.estadoUsuario" Multiplicity="1" />
+          <End Role="usuario" Type="Self.usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="estadoUsuario">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="usuario">
+              <PropertyRef Name="idestado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_usuario_rol">
+          <End Role="rol" Type="Self.rol" Multiplicity="1" />
+          <End Role="usuario" Type="Self.usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rol">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="usuario">
+              <PropertyRef Name="idrol" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="quienlohaceModelStoreContainer">
+          <EntitySet Name="area" EntityType="Self.area" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="asignacion" EntityType="Self.asignacion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="calificacion" EntityType="Self.calificacion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="datopersonal" EntityType="Self.datopersonal" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="estadoTarea" EntityType="Self.estadoTarea" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="estadoUsuario" EntityType="Self.estadoUsuario" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="habilidad" EntityType="Self.habilidad" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="rol" EntityType="Self.rol" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="subarea" EntityType="Self.subarea" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tarea" EntityType="Self.tarea" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="usuario" EntityType="Self.usuario" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_asignacion_tarea" Association="Self.FK_asignacion_tarea">
+            <End Role="tarea" EntitySet="tarea" />
+            <End Role="asignacion" EntitySet="asignacion" />
+          </AssociationSet>
+          <AssociationSet Name="FK_calificacion_tarea" Association="Self.FK_calificacion_tarea">
+            <End Role="tarea" EntitySet="tarea" />
+            <End Role="calificacion" EntitySet="calificacion" />
+          </AssociationSet>
+          <AssociationSet Name="FK_experto_usuario" Association="Self.FK_experto_usuario">
+            <End Role="usuario" EntitySet="usuario" />
+            <End Role="datopersonal" EntitySet="datopersonal" />
+          </AssociationSet>
+          <AssociationSet Name="FK_habilidad_experto" Association="Self.FK_habilidad_experto">
+            <End Role="datopersonal" EntitySet="datopersonal" />
+            <End Role="habilidad" EntitySet="habilidad" />
+          </AssociationSet>
+          <AssociationSet Name="FK_habilidad_subarea" Association="Self.FK_habilidad_subarea">
+            <End Role="subarea" EntitySet="subarea" />
+            <End Role="habilidad" EntitySet="habilidad" />
+          </AssociationSet>
+          <AssociationSet Name="FK_subarea_area" Association="Self.FK_subarea_area">
+            <End Role="area" EntitySet="area" />
+            <End Role="subarea" EntitySet="subarea" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tarea_estadoTarea" Association="Self.FK_tarea_estadoTarea">
+            <End Role="estadoTarea" EntitySet="estadoTarea" />
+            <End Role="tarea" EntitySet="tarea" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tarea_subarea" Association="Self.FK_tarea_subarea">
+            <End Role="subarea" EntitySet="subarea" />
+            <End Role="tarea" EntitySet="tarea" />
+          </AssociationSet>
+          <AssociationSet Name="FK_usuario_estadoUsuario" Association="Self.FK_usuario_estadoUsuario">
+            <End Role="estadoUsuario" EntitySet="estadoUsuario" />
+            <End Role="usuario" EntitySet="usuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_usuario_rol" Association="Self.FK_usuario_rol">
+            <End Role="rol" EntitySet="rol" />
+            <End Role="usuario" EntitySet="usuario" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="quienlohaceModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="area">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="descripcion" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="logo" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="subarea" Relationship="Self.FK_subarea_area" FromRole="area" ToRole="subarea" />
+        </EntityType>
+        <EntityType Name="asignacion">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="fechaasignacion" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="idexperto" Type="Int32" Nullable="false" />
+          <Property Name="idtarea" Type="Int32" Nullable="false" />
+          <Property Name="valorpactado" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="observaciones" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tarea" Relationship="Self.FK_asignacion_tarea" FromRole="asignacion" ToRole="tarea" />
+        </EntityType>
+        <EntityType Name="calificacion">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idtarea" Type="Int32" Nullable="false" />
+          <Property Name="fechacalificacion" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="valor" Type="Int32" />
+          <NavigationProperty Name="tarea" Relationship="Self.FK_calificacion_tarea" FromRole="calificacion" ToRole="tarea" />
+        </EntityType>
+        <EntityType Name="datopersonal">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idusuario" Type="Int32" Nullable="false" />
+          <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="direccion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="telefono" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="celular" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="facebook" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="foto" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="fecharegistro" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="fechanacimiento" Type="DateTime" Precision="0" />
+          <Property Name="genero" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="hojavida" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="estado" Type="Int32" />
+          <NavigationProperty Name="usuario" Relationship="Self.FK_experto_usuario" FromRole="datopersonal" ToRole="usuario" />
+          <NavigationProperty Name="habilidad" Relationship="Self.FK_habilidad_experto" FromRole="datopersonal" ToRole="habilidad" />
+        </EntityType>
+        <EntityType Name="habilidad">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idsubarea" Type="Int32" Nullable="false" />
+          <Property Name="idexperto" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="datopersonal" Relationship="Self.FK_habilidad_experto" FromRole="habilidad" ToRole="datopersonal" />
+          <NavigationProperty Name="subarea" Relationship="Self.FK_habilidad_subarea" FromRole="habilidad" ToRole="subarea" />
+        </EntityType>
+        <EntityType Name="rol">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="descripcion" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="usuario" Relationship="Self.FK_usuario_rol" FromRole="rol" ToRole="usuario" />
+        </EntityType>
+        <EntityType Name="subarea">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="idarea" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="area" Relationship="Self.FK_subarea_area" FromRole="subarea" ToRole="area" />
+          <NavigationProperty Name="habilidad" Relationship="Self.FK_habilidad_subarea" FromRole="subarea" ToRole="habilidad" />
+          <NavigationProperty Name="tarea" Relationship="Self.FK_tarea_subarea" FromRole="subarea" ToRole="tarea" />
+        </EntityType>
+        <EntityType Name="tarea">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="contacto" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="titulo" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="descripcion" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="foto1" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="foto2" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="foto3" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="foto4" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="idsubarea" Type="Int32" Nullable="false" />
+          <Property Name="fecharegistro" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="fechapublicado" Type="DateTime" Precision="0" />
+          <Property Name="valorestimado" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="direccion" Type="Binary" MaxLength="300" FixedLength="false" Nullable="false" />
+          <Property Name="telefono" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" MaxLength="300" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="estado" Type="Int32" />
+          <NavigationProperty Name="asignacion" Relationship="Self.FK_asignacion_tarea" FromRole="tarea" ToRole="asignacion" />
+          <NavigationProperty Name="calificacion" Relationship="Self.FK_calificacion_tarea" FromRole="tarea" ToRole="calificacion" />
+          <NavigationProperty Name="subarea" Relationship="Self.FK_tarea_subarea" FromRole="tarea" ToRole="subarea" />
+          <NavigationProperty Name="estadoTarea" Relationship="quienlohaceModel.FK_tarea_estadoTarea" FromRole="tarea" ToRole="estadoTarea" />
+        </EntityType>
+        <EntityType Name="usuario">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="usuario1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="password" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="idrol" Type="Int32" Nullable="false" />
+          <Property Name="idestado" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="datopersonal" Relationship="Self.FK_experto_usuario" FromRole="usuario" ToRole="datopersonal" />
+          <NavigationProperty Name="rol" Relationship="Self.FK_usuario_rol" FromRole="usuario" ToRole="rol" />
+          <NavigationProperty Name="estadoUsuario" Relationship="quienlohaceModel.FK_usuario_estadoUsuario" FromRole="usuario" ToRole="estadoUsuario" />
+        </EntityType>
+        <Association Name="FK_subarea_area">
+          <End Role="area" Type="Self.area" Multiplicity="1" />
+          <End Role="subarea" Type="Self.subarea" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="area">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="subarea">
+              <PropertyRef Name="idarea" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_asignacion_tarea">
+          <End Role="tarea" Type="Self.tarea" Multiplicity="1" />
+          <End Role="asignacion" Type="Self.asignacion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tarea">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="asignacion">
+              <PropertyRef Name="idtarea" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_calificacion_tarea">
+          <End Role="tarea" Type="Self.tarea" Multiplicity="1" />
+          <End Role="calificacion" Type="Self.calificacion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tarea">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="calificacion">
+              <PropertyRef Name="idtarea" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_experto_usuario">
+          <End Role="usuario" Type="Self.usuario" Multiplicity="1" />
+          <End Role="datopersonal" Type="Self.datopersonal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuario">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="datopersonal">
+              <PropertyRef Name="idusuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_habilidad_experto">
+          <End Role="datopersonal" Type="Self.datopersonal" Multiplicity="1" />
+          <End Role="habilidad" Type="Self.habilidad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="datopersonal">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="habilidad">
+              <PropertyRef Name="idexperto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_habilidad_subarea">
+          <End Role="subarea" Type="Self.subarea" Multiplicity="1" />
+          <End Role="habilidad" Type="Self.habilidad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="subarea">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="habilidad">
+              <PropertyRef Name="idsubarea" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_usuario_rol">
+          <End Role="rol" Type="Self.rol" Multiplicity="1" />
+          <End Role="usuario" Type="Self.usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rol">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="usuario">
+              <PropertyRef Name="idrol" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tarea_subarea">
+          <End Role="subarea" Type="Self.subarea" Multiplicity="1" />
+          <End Role="tarea" Type="Self.tarea" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="subarea">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tarea">
+              <PropertyRef Name="idsubarea" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="quienlohaceEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="area" EntityType="Self.area" />
+          <EntitySet Name="asignacion" EntityType="Self.asignacion" />
+          <EntitySet Name="calificacion" EntityType="Self.calificacion" />
+          <EntitySet Name="datopersonal" EntityType="Self.datopersonal" />
+          <EntitySet Name="habilidad" EntityType="Self.habilidad" />
+          <EntitySet Name="rol" EntityType="Self.rol" />
+          <EntitySet Name="subarea" EntityType="Self.subarea" />
+          <EntitySet Name="tarea" EntityType="Self.tarea" />
+          <EntitySet Name="usuario" EntityType="Self.usuario" />
+          <AssociationSet Name="FK_subarea_area" Association="Self.FK_subarea_area">
+            <End Role="area" EntitySet="area" />
+            <End Role="subarea" EntitySet="subarea" />
+          </AssociationSet>
+          <AssociationSet Name="FK_asignacion_tarea" Association="Self.FK_asignacion_tarea">
+            <End Role="tarea" EntitySet="tarea" />
+            <End Role="asignacion" EntitySet="asignacion" />
+          </AssociationSet>
+          <AssociationSet Name="FK_calificacion_tarea" Association="Self.FK_calificacion_tarea">
+            <End Role="tarea" EntitySet="tarea" />
+            <End Role="calificacion" EntitySet="calificacion" />
+          </AssociationSet>
+          <AssociationSet Name="FK_experto_usuario" Association="Self.FK_experto_usuario">
+            <End Role="usuario" EntitySet="usuario" />
+            <End Role="datopersonal" EntitySet="datopersonal" />
+          </AssociationSet>
+          <AssociationSet Name="FK_habilidad_experto" Association="Self.FK_habilidad_experto">
+            <End Role="datopersonal" EntitySet="datopersonal" />
+            <End Role="habilidad" EntitySet="habilidad" />
+          </AssociationSet>
+          <AssociationSet Name="FK_habilidad_subarea" Association="Self.FK_habilidad_subarea">
+            <End Role="subarea" EntitySet="subarea" />
+            <End Role="habilidad" EntitySet="habilidad" />
+          </AssociationSet>
+          <AssociationSet Name="FK_usuario_rol" Association="Self.FK_usuario_rol">
+            <End Role="rol" EntitySet="rol" />
+            <End Role="usuario" EntitySet="usuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tarea_subarea" Association="Self.FK_tarea_subarea">
+            <End Role="subarea" EntitySet="subarea" />
+            <End Role="tarea" EntitySet="tarea" />
+          </AssociationSet>
+          <EntitySet Name="estadoTarea" EntityType="quienlohaceModel.estadoTarea" />
+          <EntitySet Name="estadoUsuario" EntityType="quienlohaceModel.estadoUsuario" />
+          <AssociationSet Name="FK_tarea_estadoTarea" Association="quienlohaceModel.FK_tarea_estadoTarea">
+            <End Role="estadoTarea" EntitySet="estadoTarea" />
+            <End Role="tarea" EntitySet="tarea" />
+          </AssociationSet>
+          <AssociationSet Name="FK_usuario_estadoUsuario" Association="quienlohaceModel.FK_usuario_estadoUsuario">
+            <End Role="estadoUsuario" EntitySet="estadoUsuario" />
+            <End Role="usuario" EntitySet="usuario" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="estadoTarea">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="descripcion" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tarea" Relationship="quienlohaceModel.FK_tarea_estadoTarea" FromRole="estadoTarea" ToRole="tarea" />
+        </EntityType>
+        <EntityType Name="estadoUsuario">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="descripcion" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="usuario" Relationship="quienlohaceModel.FK_usuario_estadoUsuario" FromRole="estadoUsuario" ToRole="usuario" />
+        </EntityType>
+        <Association Name="FK_tarea_estadoTarea">
+          <End Type="quienlohaceModel.estadoTarea" Role="estadoTarea" Multiplicity="0..1" />
+          <End Type="quienlohaceModel.tarea" Role="tarea" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="estadoTarea">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tarea">
+              <PropertyRef Name="estado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_usuario_estadoUsuario">
+          <End Type="quienlohaceModel.estadoUsuario" Role="estadoUsuario" Multiplicity="1" />
+          <End Type="quienlohaceModel.usuario" Role="usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="estadoUsuario">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="usuario">
+              <PropertyRef Name="idestado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="quienlohaceModelStoreContainer" CdmEntityContainer="quienlohaceEntities">
+          <EntitySetMapping Name="area">
+            <EntityTypeMapping TypeName="quienlohaceModel.area">
+              <MappingFragment StoreEntitySet="area">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="logo" ColumnName="logo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="asignacion">
+            <EntityTypeMapping TypeName="quienlohaceModel.asignacion">
+              <MappingFragment StoreEntitySet="asignacion">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="fechaasignacion" ColumnName="fechaasignacion" />
+                <ScalarProperty Name="idexperto" ColumnName="idexperto" />
+                <ScalarProperty Name="idtarea" ColumnName="idtarea" />
+                <ScalarProperty Name="valorpactado" ColumnName="valorpactado" />
+                <ScalarProperty Name="observaciones" ColumnName="observaciones" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="calificacion">
+            <EntityTypeMapping TypeName="quienlohaceModel.calificacion">
+              <MappingFragment StoreEntitySet="calificacion">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="idtarea" ColumnName="idtarea" />
+                <ScalarProperty Name="fechacalificacion" ColumnName="fechacalificacion" />
+                <ScalarProperty Name="valor" ColumnName="valor" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="datopersonal">
+            <EntityTypeMapping TypeName="quienlohaceModel.datopersonal">
+              <MappingFragment StoreEntitySet="datopersonal">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="idusuario" ColumnName="idusuario" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="apellido" ColumnName="apellido" />
+                <ScalarProperty Name="direccion" ColumnName="direccion" />
+                <ScalarProperty Name="telefono" ColumnName="telefono" />
+                <ScalarProperty Name="celular" ColumnName="celular" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="facebook" ColumnName="facebook" />
+                <ScalarProperty Name="foto" ColumnName="foto" />
+                <ScalarProperty Name="fecharegistro" ColumnName="fecharegistro" />
+                <ScalarProperty Name="fechanacimiento" ColumnName="fechanacimiento" />
+                <ScalarProperty Name="genero" ColumnName="genero" />
+                <ScalarProperty Name="hojavida" ColumnName="hojavida" />
+                <ScalarProperty Name="estado" ColumnName="estado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="habilidad">
+            <EntityTypeMapping TypeName="quienlohaceModel.habilidad">
+              <MappingFragment StoreEntitySet="habilidad">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="idsubarea" ColumnName="idsubarea" />
+                <ScalarProperty Name="idexperto" ColumnName="idexperto" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="rol">
+            <EntityTypeMapping TypeName="quienlohaceModel.rol">
+              <MappingFragment StoreEntitySet="rol">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="subarea">
+            <EntityTypeMapping TypeName="quienlohaceModel.subarea">
+              <MappingFragment StoreEntitySet="subarea">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="idarea" ColumnName="idarea" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tarea">
+            <EntityTypeMapping TypeName="quienlohaceModel.tarea">
+              <MappingFragment StoreEntitySet="tarea">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="contacto" ColumnName="contacto" />
+                <ScalarProperty Name="titulo" ColumnName="titulo" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="foto1" ColumnName="foto1" />
+                <ScalarProperty Name="foto2" ColumnName="foto2" />
+                <ScalarProperty Name="foto3" ColumnName="foto3" />
+                <ScalarProperty Name="foto4" ColumnName="foto4" />
+                <ScalarProperty Name="idsubarea" ColumnName="idsubarea" />
+                <ScalarProperty Name="fecharegistro" ColumnName="fecharegistro" />
+                <ScalarProperty Name="fechapublicado" ColumnName="fechapublicado" />
+                <ScalarProperty Name="valorestimado" ColumnName="valorestimado" />
+                <ScalarProperty Name="direccion" ColumnName="direccion" />
+                <ScalarProperty Name="telefono" ColumnName="telefono" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="estado" ColumnName="estado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="usuario">
+            <EntityTypeMapping TypeName="quienlohaceModel.usuario">
+              <MappingFragment StoreEntitySet="usuario">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="usuario1" ColumnName="usuario" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="idrol" ColumnName="idrol" />
+                <ScalarProperty Name="idestado" ColumnName="idestado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="estadoTarea">
+            <EntityTypeMapping TypeName="quienlohaceModel.estadoTarea">
+              <MappingFragment StoreEntitySet="estadoTarea">
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="estadoUsuario">
+            <EntityTypeMapping TypeName="quienlohaceModel.estadoUsuario">
+              <MappingFragment StoreEntitySet="estadoUsuario">
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
